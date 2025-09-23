@@ -1,0 +1,6 @@
+{
+    "css.lint.unknownAtRules": "ignore",      // plain-CSS files
+    "scss.lint.unknownAtRules": "ignore",     // if you ever use SCSS
+    "postcss.lint.unknownAtRules": "ignore"   // PostCSS grammar
+  }
+  

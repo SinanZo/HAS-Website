@@ -1,0 +1,227 @@
+/* Overall Container */
+.productDetailContainer {
+  margin: 120px auto;
+  width: 90%;
+  max-width: 1000px;
+  padding: 20px;
+  font-family: "Open Sans", sans-serif;
+  background-color: #ffffff;
+  color: #000;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Back Button */
+.backButton {
+  background-color: #eee;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  transition: background-color 0.3s;
+}
+.backButton:hover {
+  background-color: #ddd;
+}
+
+/* Titles & Meta */
+.detailTitleModal {
+  font-size: 2rem;
+  color: #034d58;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.detailMeta p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Layout for Detail Content */
+.detailContent {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Gallery Styles */
+.galleryWrapper {
+  max-width: 400px;
+  width: 100%;
+  background-color: #fafafa;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+.galleryImageContainer {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  max-height: 80vh;
+  overflow: hidden;
+  cursor: grab;
+}
+.galleryImageContainer:active {
+  cursor: grabbing;
+}
+.detailImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+  pointer-events: none;
+}
+
+/* Gallery Navigation */
+.galleryNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+.galleryButton {
+  background-color: #eee;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  transition: background-color 0.2s;
+}
+.galleryButton:hover {
+  background-color: #ddd;
+}
+.galleryCount {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Detail Information */
+.detailInfo {
+  flex: 1;
+  min-width: 280px;
+  text-align: left;
+}
+.detailBrief {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+.detailDescription {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+.detailSizes,
+.detailColors {
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  color: #000;
+}
+
+/* Color Swatches */
+.colorSwatches {
+  display: flex;
+  gap: 8px;
+  margin-top: 5px;
+}
+.colorSwatch {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: #fff;
+  transition: border 0.3s;
+}
+.colorSwatch.default {
+  background-color: #ccc;
+  color: #000;
+}
+.colorSwatch.selected {
+  border: 2px solid #ffcc00;
+}
+
+/* Additional Information Box (Glassy style) */
+.detailAdditionalInfo {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  padding: 15px;
+  color: #000;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.detailAdditionalInfo h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #034d58;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 5px;
+}
+.detailAdditionalInfo table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+.detailAdditionalInfo th,
+.detailAdditionalInfo td {
+  padding: 8px;
+  text-align: left;
+}
+.detailAdditionalInfo th {
+  width: 150px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Order Button */
+.orderButton {
+  padding: 10px 16px;
+  background-color: #ffcc00;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.orderButton:hover {
+  background-color: #e6b800;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .detailContent {
+    flex-direction: column;
+    align-items: center;
+  }
+  .galleryWrapper {
+    max-width: 100%;
+  }
+  .detailInfo {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+.detailPrice{font-weight:700;margin-top:8px;font-size:1.1rem}
+.detailDatasheet a{color:#007bff;text-decoration:underline}
+.detailActions{display:flex;gap:8px;margin-top:12px}
+.quoteButton{background:#ff8c00;color:#fff;border:0;padding:10px 14px;border-radius:6px;cursor:pointer}

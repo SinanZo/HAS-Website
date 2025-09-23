@@ -1,0 +1,39 @@
+{
+    "categories": [
+      {
+        "type": "Ear Muffs",
+        "description": "Explore our range of premium ear muffs for superior hearing protection.",
+        "meta": {
+          "title": "Ear Muffs | Safety Products Store",
+          "description": "Browse our collection of ear muffs for exceptional hearing protection in industrial and noisy environments."
+        },
+        "subcategories": [
+          {
+            "category": "MAGNY COURS Series",
+            "products": [
+              {
+                "id": 1,
+                "name": "MAGNY COURS 2",
+                "description": "High-quality MAGNY COURS 2 ear muffs for industrial-grade hearing protection.",
+                "image": "./assets/images/Ear Muffs/MAGNY COURS 2/Liferay Product-MAGNY-COURS2.png",
+                "price": "$20"
+              }
+            ]
+          },
+          {
+            "category": "SPA Series",
+            "products": [
+              {
+                "id": 2,
+                "name": "SPA 3",
+                "description": "Durable SPA 3 ear muffs for heavy-duty use and maximum noise cancellation.",
+                "image": "./assets/images/Ear Muffs/SPA 3/SPA 3.png",
+                "price": "$25"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

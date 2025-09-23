@@ -1,0 +1,22 @@
+.call-to-action {
+    padding: 40px;
+    text-align: center;
+    background: #ffcc00;
+    color: #333;
+  }
+  
+  .call-to-action h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .call-to-action ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .call-to-action li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  

@@ -1,0 +1,8 @@
+@layer utilities {
+    @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(var(--move))} }
+    .animate-marquee   { animation:marquee var(--time) linear infinite }
+    @media(hover:hover){ .pause-on-hover:hover .animate-marquee{animation-play-state:paused} }
+    @media(prefers-reduced-motion:reduce){ .animate-marquee{animation:none} }
+    .link{ @apply text-white hover:text-amber-400 duration-300 }
+  }
+  

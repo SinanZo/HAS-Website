@@ -1,0 +1,31 @@
+import React, { useState } from 'react';
+import SearchBar from './SearchBar';
+import ProductCard from './ProductCard';
+import './CategoryGrid.css';
+import helmets from '../data/helmets.json'; // Ensure it's importing correctly
+
+console.log('Helmets Data:', helmets); // Debug the data
+
+const CategoryGrid = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+
+  // Check if `helmets` is an array
+  const filteredCategories = Array.isArray(helmets)
+    ? helmets.filter((category) =>
+        category.name.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : []; // Default to an empty array if not
+
+  return (
+    <div className="category-grid-container">
+      <SearchBar onSearch={setSearchQuery} />
+      <div className="category-grid">
+        {filteredCategories.map((category, index) => (
+          <ProductCard key={index} category={category} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default CategoryGrid;

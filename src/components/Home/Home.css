@@ -1,0 +1,27 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    background-color: #ffffff;
+    overflow-x: hidden;
+  }
+  
+  /* Each section gets its own padding and max-width for better readability */
+  .home-section {
+    padding: 40px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  /* Optional: add a subtle divider between sections */
+  .home-section:not(:last-child) {
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .home-section {
+      padding: 30px 15px;
+    }
+  }
+  

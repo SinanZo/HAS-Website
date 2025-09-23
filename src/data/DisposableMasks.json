@@ -1,0 +1,96 @@
+{
+    "categories": [
+      {
+        "type": "Disposable Masks",
+        "description": "Explore our high-quality disposable masks, providing reliable protection for various applications.",
+        "meta": {
+          "title": "Premium Disposable Masks | Reliable Protection | Safety Products",
+          "description": "Browse our collection of disposable masks offering high filtration efficiency for medical, industrial, and personal use."
+        },
+        "subcategories": [
+          {
+            "category": "Medical Masks",
+            "products": [
+              {
+                "id": 1,
+                "name": "Surgical Mask",
+                "description": "High-quality surgical mask with triple-layer protection, ideal for medical professionals.",
+                "image": "./assets/images/DisposableMasks/Surgical-Mask.png",
+                "price": "$10 per box",
+                "meta": {
+                  "title": "Surgical Mask | Medical-Grade Protection",
+                  "description": "Premium surgical mask with triple-layer protection for healthcare professionals."
+                }
+              },
+              {
+                "id": 2,
+                "name": "N95 Respirator",
+                "description": "N95 mask with superior filtration for medical and high-risk environments.",
+                "image": "./assets/images/DisposableMasks/N95-Mask.png",
+                "price": "$25 per box",
+                "meta": {
+                  "title": "N95 Respirator Mask | High-Filtration Efficiency",
+                  "description": "Protect yourself with our N95 respirator mask offering 95% particle filtration efficiency."
+                }
+              }
+            ]
+          },
+          {
+            "category": "Industrial Masks",
+            "products": [
+              {
+                "id": 3,
+                "name": "Dust Mask",
+                "description": "Reliable dust mask with multi-layer protection for industrial settings.",
+                "image": "./assets/images/DisposableMasks/Dust-Mask.png",
+                "price": "$15 per box",
+                "meta": {
+                  "title": "Dust Mask | Reliable Industrial Protection",
+                  "description": "Our dust mask provides dependable multi-layer filtration for industrial workers."
+                }
+              },
+              {
+                "id": 4,
+                "name": "Carbon-Activated Mask",
+                "description": "Carbon-activated mask designed for industrial environments with odor control.",
+                "image": "./assets/images/DisposableMasks/Carbon-Mask.png",
+                "price": "$20 per box",
+                "meta": {
+                  "title": "Carbon-Activated Mask | Industrial Odor Control",
+                  "description": "Get superior odor control with our carbon-activated mask designed for industrial safety."
+                }
+              }
+            ]
+          },
+          {
+            "category": "Everyday Masks",
+            "products": [
+              {
+                "id": 5,
+                "name": "3-Ply Mask",
+                "description": "Comfortable 3-ply mask for daily use with breathable fabric.",
+                "image": "./assets/images/DisposableMasks/3-Ply-Mask.png",
+                "price": "$8 per box",
+                "meta": {
+                  "title": "3-Ply Mask | Daily Protection",
+                  "description": "Enjoy daily comfort with our breathable 3-ply mask offering essential protection."
+                }
+              },
+              {
+                "id": 6,
+                "name": "Children’s Mask",
+                "description": "Colorful and comfortable mask designed specifically for children.",
+                "image": "./assets/images/DisposableMasks/Child-Mask.png",
+                "price": "$10 per box",
+                "meta": {
+                  "title": "Children's Mask | Fun & Comfortable Protection",
+                  "description": "Provide safe and comfortable protection for kids with our colorful disposable masks."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

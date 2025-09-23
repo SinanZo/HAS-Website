@@ -1,0 +1,93 @@
+/* 🌟 General Styling */
+.category-grid {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.category-grid h2 {
+  font-size: 2.5rem;
+  color: #034D58;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+  max-width: 850px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* 🔹 Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* 🟢 Grid Item Styling */
+.grid-item {
+  padding: 20px;
+  border-radius: 12px;
+  background: white;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  color: #034D58;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.grid-item i {
+  font-size: 2.5rem;
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.grid-item h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.grid-item p {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* 🔵 Hover Effect */
+.grid-item:hover {
+  background: #034D58;
+  color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.grid-item:hover i {
+  color: white;
+}
+
+.grid-item:hover p {
+  color: white;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .category-grid h2 {
+    font-size: 2rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}

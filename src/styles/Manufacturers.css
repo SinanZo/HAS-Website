@@ -1,0 +1,43 @@
+/* src/styles/Manufacturers.css */
+
+.manufacturersContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.manufacturerCard {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.manufacturerCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.manufacturerLogo {
+  width: 80%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.categoryLink {
+  color: #007bff;
+  text-decoration: none;
+  display: block;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.categoryLink:hover {
+  text-decoration: underline;
+}

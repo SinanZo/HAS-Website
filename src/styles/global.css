@@ -1,0 +1,57 @@
+.contact-bar-wrapper {
+  background-color: #034d58;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  padding: 10px 0;
+}
+
+.contact-bar-track {
+  display: flex;
+  animation: scroll 45s linear infinite;
+  will-change: transform; /* (optional) improves smoothness */
+}
+
+.contact-bar-wrapper:hover .contact-bar-track {
+  animation-play-state: paused; /* ← This is the magic! */
+}
+
+.contact-bar-content {
+  display: flex;
+  align-items: center;
+}
+
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 30px;
+  font-size: 14px;
+}
+
+.contact-item svg {
+  margin-right: 5px;
+  color: #f8b400;
+}
+
+.contact-item a {
+  margin-left: 5px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-item a:hover {
+  color: #f8b400;
+}
+
+.label {
+  font-weight: 700;
+  margin-right: 5px;
+}
+
+/* Smooth infinite scrolling */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

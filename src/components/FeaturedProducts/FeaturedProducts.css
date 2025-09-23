@@ -1,0 +1,201 @@
+/* Container and overall section styling */
+.featured-products-section {
+  padding: 60px 20px;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.featured-title {
+  font-size: 2.5rem;
+  color: #034d58;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Carousel Container */
+.carousel-container {
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Carousel Track */
+.carousel-track {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+
+/* Each Featured Card */
+.featured-card {
+  min-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Featured Image Wrapper and Overlay */
+.featured-image-wrapper {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.featured-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.featured-image-wrapper:hover .featured-image {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.featured-image-wrapper:hover .overlay {
+  opacity: 1;
+}
+
+.view-details {
+  color: #fff;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Featured Info */
+.featured-info {
+  margin-top: 15px;
+}
+
+.featured-name {
+  font-size: 1.5rem;
+  color: #034d58;
+  margin: 10px 0 5px;
+}
+
+.featured-brief {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.featured-actions {
+  margin-top: 10px;
+}
+
+/* Order Button */
+.orderButton {
+  padding: 10px 20px;
+  background-color: #ffcc00;
+  border: none;
+  color: #333;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.orderButton:hover {
+  background-color: #e6b800;
+}
+
+/* Carousel Controls */
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.prevButton,
+.nextButton {
+  background: #00334d;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.prevButton:hover,
+.nextButton:hover {
+  background-color: #002b5b;
+}
+
+/* Indicators */
+.indicators {
+  display: flex;
+  gap: 8px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+  background: #ffcc00;
+}
+
+/* View All Button */
+.view-all-button {
+  margin-top: 30px;
+  padding: 12px 30px;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-all-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .featured-card {
+    padding: 10px;
+  }
+  .featured-name {
+    font-size: 1.3rem;
+  }
+  .featured-brief {
+    font-size: 0.9rem;
+  }
+}
+
+/* Price and datasheet */
+.featured-price { font-weight: 700; margin-top: 8px; color: #111 }
+.featured-datasheet a { color: #007bff; text-decoration: underline }
+.quoteButton { margin-left: 8px; background: #ff8c00; color: #fff; border: 0; padding: 8px 10px; border-radius: 4px; cursor: pointer }

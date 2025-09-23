@@ -1,0 +1,46 @@
+{
+    "categories": [
+      {
+        "type": "Safety Spectacles",
+        "description": "Explore our range of premium safety spectacles offering superior eye protection for various applications.",
+        "meta": {
+          "title": "Safety Spectacles | Safety Products Store",
+          "description": "Shop high-quality safety spectacles designed for industrial, laboratory, and personal use to ensure eye safety."
+        },
+        "subcategories": [
+          {
+            "category": "BRAVA2 Series",
+            "products": [
+              {
+                "id": 1,
+                "name": "BRAVA2 Clear",
+                "description": "High-clarity BRAVA2 Clear safety spectacles by Delta Plus, providing reliable eye protection.",
+                "image": "./assets/images/Safety Spectacle/Brava2/Liferay Product-BRAVA2 CLEAR.png",
+                "price": "$15"
+              }
+            ]
+          },
+          {
+            "category": "Galeras Series",
+            "products": [
+              {
+                "id": 2,
+                "name": "Galeras Clear",
+                "description": "Galeras Clear safety spectacles with anti-scratch coating for enhanced durability and visibility.",
+                "image": "./assets/images/Safety Spectacle/Galeras/Liferay Product-GALERAS CLEAR.png",
+                "price": "$18"
+              },
+              {
+                "id": 3,
+                "name": "Galeras Smoke",
+                "description": "Galeras Smoke safety spectacles for UV protection and stylish design.",
+                "image": "./assets/images/Safety Spectacle/Galeras/Liferay Product-GALERAS SMOKE.png",
+                "price": "$20"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

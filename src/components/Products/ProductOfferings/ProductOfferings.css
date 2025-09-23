@@ -1,0 +1,107 @@
+:root {
+  --primary-color: #034D58;
+  --secondary-color: #ffcc00;
+  --text-color: #ffffff;
+  --bg-light: #f8f9fa;
+  --hover-bg: #034D58;
+  --border-radius: 12px;
+}
+
+/* 🟢 General Styling */
+.product-offerings {
+  padding: 80px 20px;
+  background-color: var(--bg-light);
+  text-align: center;
+}
+
+/* 🔵 Title & Description */
+.product-offerings h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* 🔹 Offerings Grid */
+.offerings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* 🟢 Offering Item Styling */
+.offering-item {
+  padding: 20px;
+  border-radius: var(--border-radius);
+  background: white;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ Icons */
+.offering-item i {
+  font-size: 2.2rem;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+/* 🔵 Hover Effect */
+.offering-item:hover {
+  background: var(--hover-bg);
+  color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.offering-item:hover i {
+  color: white;
+}
+
+/* 🟢 Active Category */
+.offering-item.active {
+  background: var(--hover-bg);
+  color: white;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.offering-item.active i {
+  color: white;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .product-offerings h2 {
+    font-size: 2rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+
+  .offerings-grid {
+    grid-template-columns: 1fr;
+  }
+}

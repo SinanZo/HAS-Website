@@ -1,0 +1,59 @@
+.contact-bar {
+  width: 100%;
+  overflow: hidden;
+  background-color: #034d58; /* Deep teal background */
+  padding: 8px 0;
+  position: relative;
+  z-index: 1000;
+}
+
+.marquee {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: inline-flex;
+  animation: scroll-desktop 25s linear infinite;
+  font-family: 'Poppins', 'Open Sans', Arial, sans-serif; /* <- elegant font */
+  font-size: 16px; /* slightly bigger text */
+  font-weight: 900; /* heavy, thick */
+  letter-spacing: 0.7px; /* better spacing */
+  color: #ffffff;
+  gap: 80px;
+  will-change: transform;
+}
+
+.marquee-content a {
+  color: #ffcc00; /* golden links */
+  text-decoration: none;
+  font-weight: 900;
+  transition: color 0.3s;
+}
+
+.marquee-content a:hover {
+  color: #ffffff; /* hover turns white */
+}
+
+@keyframes scroll-desktop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause on hover (optional) */
+.marquee:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+/* Mobile-friendly font adjustment */
+@media (max-width: 768px) {
+  .marquee-content {
+    font-size: 14px; /* slightly smaller on small screens */
+    gap: 40px;
+  }
+}

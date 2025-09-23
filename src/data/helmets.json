@@ -1,0 +1,141 @@
+{
+  "categories": [
+    {
+      "type": "Safety Helmets",
+      "meta": {
+        "title": "Safety Helmets - Premium Quality",
+        "description": "Explore our premium range of safety helmets for construction and industrial use."
+      },
+      "colors": [
+        {
+          "color": "Black",
+          "products": [
+            {
+              "id": 1,
+              "name": "DIAMOND V - Black",
+              "description": "Premium black safety helmet by Delta Plus, ideal for construction and industrial use.",
+              "image": "./assets/images/SafetyHelmets/DIAMOND_V/DIAMOND_V_Black.png"
+            }
+          ]
+        },
+        {
+          "color": "Blue",
+          "products": [
+            {
+              "id": 2,
+              "name": "DIAMOND V - Blue",
+              "description": "High-quality blue safety helmet by Delta Plus, offering superior head protection.",
+              "image": "./assets/images/SafetyHelmets/DIAMOND_V/DIAMOND_V_Blue.png"
+            }
+          ]
+        },
+        {
+          "color": "Gray-Yellow",
+          "products": [
+            {
+              "id": 3,
+              "name": "DIAMOND V - Gray-Yellow",
+              "description": "Stylish gray-yellow safety helmet by Delta Plus, ensuring both safety and aesthetic appeal.",
+              "image": "./assets/images/SafetyHelmets/DIAMOND_V/DIAMOND_V_Gray-Yellow.png"
+            }
+          ]
+        },
+        {
+          "color": "Green",
+          "products": [
+            {
+              "id": 4,
+              "name": "DIAMOND V - Green",
+              "description": "Eco-friendly green safety helmet by Delta Plus for industrial use.",
+              "image": "./assets/images/SafetyHelmets/DIAMOND_V/DIAMOND_V_Green.png"
+            }
+          ]
+        },
+        {
+          "color": "Orange",
+          "products": [
+            {
+              "id": 5,
+              "name": "DIAMOND V - Orange",
+              "description": "High-visibility orange safety helmet by Delta Plus, perfect for industrial environments.",
+              "image": "./assets/images/SafetyHelmets/DIAMOND_V/DIAMOND_V_Orange.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Quartz Helmets",
+      "meta": {
+        "title": "Quartz Helmets - Stylish and Safe",
+        "description": "Discover our Quartz helmets combining style and industrial safety."
+      },
+      "colors": [
+        {
+          "color": "Red",
+          "products": [
+            {
+              "id": 6,
+              "name": "QUARTZ UP III - Red",
+              "description": "Red Quartz helmet by Delta Plus, combining style and safety for industrial environments.",
+              "image": "./assets/images/SafetyHelmets/QUARTZ_UP/QUARTZ_UP_III_Red.png"
+            }
+          ]
+        },
+        {
+          "color": "White",
+          "products": [
+            {
+              "id": 7,
+              "name": "QUARTZ UP III - White",
+              "description": "Quartz UP III white helmet by Delta Plus for clean and professional safety needs.",
+              "image": "./assets/images/SafetyHelmets/QUARTZ_UP/QUARTZ_UP_III_White.png"
+            }
+          ]
+        },
+        {
+          "color": "Yellow",
+          "products": [
+            {
+              "id": 8,
+              "name": "QUARTZ UP IV - Yellow",
+              "description": "Bright yellow Quartz helmet by Delta Plus, providing vibrant protection.",
+              "image": "./assets/images/SafetyHelmets/QUARTZ_UP/QUARTZ_UP_IV_Yellow.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Zircon Helmets",
+      "meta": {
+        "title": "Zircon Helmets - Premium Design",
+        "description": "Shop premium Zircon helmets by Delta Plus for vibrant safety and unique style."
+      },
+      "colors": [
+        {
+          "color": "Gray",
+          "products": [
+            {
+              "id": 9,
+              "name": "Zircon1 - Gray",
+              "description": "Gray Zircon helmet by Delta Plus, crafted for heavy-duty industrial use.",
+              "image": "./assets/images/SafetyHelmets/Zircon/Zircon1_Gray.png"
+            }
+          ]
+        },
+        {
+          "color": "Yellow",
+          "products": [
+            {
+              "id": 10,
+              "name": "Zircon1 - Yellow",
+              "description": "Yellow Zircon helmet by Delta Plus, offering premium safety in vibrant style.",
+              "image": "./assets/images/SafetyHelmets/Zircon/Zircon1_Yellow.png"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

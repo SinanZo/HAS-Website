@@ -1,0 +1,138 @@
+/* ==============================
+   Distributors Section
+   ============================== */
+   .distributors-section {
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .distributors-section h2 {
+    font-size: 2.5rem;
+    color: #034D58;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Distributors Grid */
+  .distributors-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .distributor-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    width: 180px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .distributor-item:hover,
+  .distributor-item.active {
+    background-color: #ffcc00;
+    transform: scale(1.05);
+  }
+  
+  /* Distributor Images */
+  .distributor-item img {
+    width: 100px;           /* Ensures images stay at a fixed width */
+    height: auto;           /* Maintain aspect ratio */
+    display: block;         /* Allows auto margins to center the image */
+    margin: 0 auto 10px;     /* Center the image horizontally with some bottom spacing */
+  }
+  
+  /* ==============================
+     Categories, Subcategories & Products Containers
+     ============================== */
+  .categories-container,
+  .subcategories-container,
+  .products-container {
+    margin-top: 30px;
+  }
+  
+  /* Categories & Subcategories Grids */
+  .categories-grid,
+  .subcategories-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .category-item,
+  .subcategory-item {
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .category-item:hover,
+  .category-item.active,
+  .subcategory-item:hover,
+  .subcategory-item.active {
+    background-color: #034D58;
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  /* ==============================
+     Products Container
+     ============================== */
+  .products-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .products-container ul li {
+    font-size: 1.2rem;
+    color: #555;
+    background: #f1f1f1;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 5px;
+    display: inline-block;
+  }
+  
+  /* ==============================
+     RTL Support
+     ============================== */
+  html[lang="ar"] body {
+    direction: rtl;
+    text-align: right;
+  }
+  
+  html[lang="en"] body {
+    direction: ltr;
+    text-align: left;
+  }
+  
+  /* ==============================
+     Mobile Responsive Adjustments
+     ============================== */
+  @media (max-width: 768px) {
+    .distributors-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .categories-grid,
+    .subcategories-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .distributor-item {
+      width: 90%;
+    }
+  }
+  

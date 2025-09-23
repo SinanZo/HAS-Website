@@ -1,0 +1,31 @@
+#hero {
+    background: linear-gradient(to bottom, #ff6600, #f2f2f2);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .shop-now {
+    background-color: white;
+    color: #ff6600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .shop-now:hover {
+    background-color: #ffcc00;
+  }
+  

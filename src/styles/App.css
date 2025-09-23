@@ -1,0 +1,15 @@
+@media (max-width: 768px) {
+  .navbar-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .about-features,
+  .category-grid {
+    flex-direction: column;
+  }
+}

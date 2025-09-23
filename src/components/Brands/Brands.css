@@ -1,0 +1,39 @@
+.brands {
+    padding: 40px 20px;
+    text-align: center;
+    background: #f9f9f9;
+  }
+  
+  .brands h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .brand-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .brand {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .brand:hover {
+    transform: scale(1.1);
+  }
+  
+  .brand img {
+    height: 80px;
+    width: auto;
+  }
+  
+  .brand p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+  }
+  

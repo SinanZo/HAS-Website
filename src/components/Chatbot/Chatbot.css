@@ -1,0 +1,15 @@
+/* Chatbot Floating Icon Adjustment */
+#tawkchat-container {
+  bottom: 90px !important; /* Adjusts chatbot positioning */
+  right: 25px !important; /* Keeps it aligned with Back-to-Top button */
+  z-index: 9999 !important; /* Ensures chatbot is always visible */
+  position: fixed !important;
+}
+
+/* Ensure the chat widget doesn't overlap with Back-to-Top */
+@media (max-width: 768px) {
+  #tawkchat-container {
+    bottom: 80px !important;
+    right: 15px !important;
+  }
+}
