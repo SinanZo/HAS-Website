@@ -57,6 +57,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@playwright/test": "^1.56.1",
     "@tailwindcss/postcss": "^4.1.4",
     "autoprefixer": "^10.4.21",
     "cross-env": "^7.0.3",

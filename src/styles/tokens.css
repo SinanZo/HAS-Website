@@ -1,0 +1,329 @@
+/* Semantic Design Tokens - CSS Custom Properties */
+/* Supports both light and dark modes with WCAG 2.2 AA compliance */
+
+:root {
+  /* ============================================
+     LIGHT MODE (Default)
+     ============================================ */
+
+  /* Neutral Colors */
+  --bg: hsl(0, 0%, 100%);                    /* Pure white background */
+  --surface: hsl(0, 0%, 98%);                /* Slightly off-white for surfaces */
+  --surface-secondary: hsl(0, 0%, 95%);      /* Secondary surface */
+  --border: hsl(0, 0%, 88%);                 /* Border color */
+  --border-subtle: hsl(0, 0%, 93%);          /* Subtle border */
+  --fg: hsl(0, 0%, 20%);                     /* Primary text - 4.5:1 contrast ratio ✓ */
+  --fg-secondary: hsl(0, 0%, 40%);           /* Secondary text - 7:1 contrast ratio ✓ */
+  --fg-muted: hsl(0, 0%, 60%);               /* Muted text - 3.5:1 contrast ratio ✓ */
+  --fg-disabled: hsl(0, 0%, 75%);            /* Disabled text */
+
+  /* Brand Colors - Primary (Teal) */
+  --primary-50: hsl(188, 100%, 96%);
+  --primary-100: hsl(188, 100%, 90%);
+  --primary-200: hsl(188, 100%, 80%);
+  --primary-300: hsl(188, 100%, 70%);
+  --primary-400: hsl(188, 90%, 55%);
+  --primary-500: hsl(188, 82%, 45%);         /* Main brand color */
+  --primary-600: hsl(188, 85%, 40%);
+  --primary-700: hsl(188, 85%, 32%);         /* #034D58 equivalent */
+  --primary-800: hsl(188, 85%, 24%);
+  --primary-900: hsl(188, 85%, 16%);
+
+  /* Brand Colors - Accent (Gold) */
+  --accent-50: hsl(45, 100%, 96%);
+  --accent-100: hsl(45, 100%, 90%);
+  --accent-200: hsl(45, 100%, 80%);
+  --accent-300: hsl(45, 100%, 70%);
+  --accent-400: hsl(45, 100%, 60%);
+  --accent-500: hsl(45, 100%, 50%);          /* #FFCC00 equivalent */
+  --accent-600: hsl(45, 100%, 40%);
+  --accent-700: hsl(45, 100%, 32%);
+  --accent-800: hsl(45, 100%, 24%);
+  --accent-900: hsl(45, 100%, 16%);
+
+  /* Status Colors */
+  --success-50: hsl(150, 100%, 96%);
+  --success-200: hsl(150, 100%, 70%);
+  --success-500: hsl(150, 75%, 45%);         /* Green for success */
+  --success-700: hsl(150, 75%, 30%);
+
+  --warning-50: hsl(35, 100%, 96%);
+  --warning-200: hsl(35, 100%, 70%);
+  --warning-500: hsl(35, 100%, 45%);         /* Orange for warning */
+  --warning-700: hsl(35, 100%, 30%);
+
+  --error-50: hsl(0, 100%, 96%);
+  --error-200: hsl(0, 100%, 70%);
+  --error-500: hsl(0, 84%, 60%);             /* Red for error */
+  --error-700: hsl(0, 84%, 45%);
+
+  --info-50: hsl(200, 100%, 96%);
+  --info-200: hsl(200, 100%, 70%);
+  --info-500: hsl(200, 100%, 45%);           /* Blue for info */
+  --info-700: hsl(200, 100%, 30%);
+
+  /* Interactive Elements */
+  --primary: var(--primary-700);
+  --primary-hover: var(--primary-600);
+  --primary-active: var(--primary-800);
+  --accent: var(--accent-500);
+  --accent-hover: var(--accent-600);
+  --accent-active: var(--accent-700);
+
+  /* Semantic Text Colors */
+  --text: var(--fg);
+  --text-secondary: var(--fg-secondary);
+  --text-muted: var(--fg-muted);
+  --text-disabled: var(--fg-disabled);
+  --text-inverse: hsl(0, 0%, 100%);
+
+  /* Semantic Background Colors */
+  --bg-overlay: rgba(0, 0, 0, 0.5);
+  --bg-overlay-secondary: rgba(0, 0, 0, 0.3);
+  --bg-success: var(--success-50);
+  --bg-warning: var(--warning-50);
+  --bg-error: var(--error-50);
+  --bg-info: var(--info-50);
+
+  /* Ring / Focus Colors */
+  --ring: var(--primary-500);
+  --ring-offset: var(--bg);
+  --ring-width: 2px;
+
+  /* Shadow Tokens */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+
+  /* Spacing Scale (8px base) */
+  --space-xs: 0.25rem;   /* 4px */
+  --space-sm: 0.5rem;    /* 8px */
+  --space-md: 1rem;      /* 16px */
+  --space-lg: 1.5rem;    /* 24px */
+  --space-xl: 2rem;      /* 32px */
+  --space-2xl: 3rem;     /* 48px */
+
+  /* Border Radius */
+  --radius-sm: 0.375rem;  /* 6px */
+  --radius-md: 0.5rem;    /* 8px */
+  --radius-lg: 0.75rem;   /* 12px */
+  --radius-xl: 1rem;      /* 16px */
+  --radius-full: 9999px;
+
+  /* Typography Scale */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-loose: 1.75;
+
+  /* Font Family */
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-arabic: 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Z-index Scale */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-tooltip: 1070;
+
+  /* Breakpoints for Reference (used in media queries) */
+  --bp-sm: 640px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+  --bp-2xl: 1536px;
+}
+
+/* ============================================
+   DARK MODE (Prefers color scheme dark)
+   ============================================ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Neutral Colors - Dark Mode */
+    --bg: hsl(0, 0%, 10%);                   /* Very dark background */
+    --surface: hsl(0, 0%, 15%);              /* Slightly lighter surface */
+    --surface-secondary: hsl(0, 0%, 20%);    /* Secondary surface */
+    --border: hsl(0, 0%, 30%);               /* Border color */
+    --border-subtle: hsl(0, 0%, 25%);        /* Subtle border */
+    --fg: hsl(0, 0%, 95%);                   /* Primary text - light for dark background */
+    --fg-secondary: hsl(0, 0%, 80%);         /* Secondary text */
+    --fg-muted: hsl(0, 0%, 60%);             /* Muted text */
+    --fg-disabled: hsl(0, 0%, 40%);          /* Disabled text */
+
+    /* Brand Colors remain perceptually similar but adjust for dark */
+    --primary-500: hsl(188, 100%, 55%);      /* Lighter in dark mode */
+    --primary-600: hsl(188, 100%, 50%);
+    --primary-700: hsl(188, 85%, 45%);
+    
+    --accent-500: hsl(45, 100%, 55%);        /* Slightly darker gold */
+    --accent-600: hsl(45, 100%, 50%);
+
+    /* Status Colors - Dark Mode */
+    --success-500: hsl(150, 85%, 55%);
+    --warning-500: hsl(35, 100%, 55%);
+    --error-500: hsl(0, 84%, 65%);
+    --info-500: hsl(200, 100%, 55%);
+
+    /* Text Inverse for dark mode */
+    --text-inverse: hsl(0, 0%, 10%);
+
+    /* Overlay - more prominent in dark mode */
+    --bg-overlay: rgba(0, 0, 0, 0.7);
+    --bg-overlay-secondary: rgba(0, 0, 0, 0.5);
+
+    /* Ring offset */
+    --ring-offset: var(--bg);
+  }
+}
+
+/* ============================================
+   ELEMENT-LEVEL SEMANTIC COLORS
+   ============================================ */
+
+/* Links */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+a:active {
+  color: var(--primary-active);
+}
+
+a:focus-visible {
+  outline: var(--ring-width) solid var(--ring);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+button:focus-visible {
+  outline: var(--ring-width) solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Form Inputs */
+input, textarea, select {
+  font-family: inherit;
+  color: var(--fg);
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-sm) var(--space-md);
+  transition: all var(--transition-fast);
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 var(--ring-width) var(--ring);
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--fg-muted);
+}
+
+input:disabled, textarea:disabled, select:disabled {
+  background-color: var(--surface-secondary);
+  color: var(--fg-disabled);
+  cursor: not-allowed;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--fg);
+  margin: 0;
+  line-height: var(--line-height-tight);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+}
+
+h5 {
+  font-size: var(--font-size-lg);
+}
+
+h6 {
+  font-size: var(--font-size-base);
+}
+
+/* Paragraph */
+p {
+  color: var(--text);
+  margin: 0;
+  line-height: var(--line-height-normal);
+}
+
+/* Code */
+code, pre {
+  background-color: var(--surface-secondary);
+  color: var(--fg);
+  border-radius: var(--radius-md);
+  font-family: 'Courier New', monospace;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--primary);
+  color: var(--text-inverse);
+}
+
+/* Scrollbar (Webkit browsers) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}

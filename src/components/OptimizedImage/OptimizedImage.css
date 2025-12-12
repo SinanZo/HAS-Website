@@ -1,0 +1,58 @@
+/* ────────────────────────────────────────────────────────── */
+/*  src/components/OptimizedImage/OptimizedImage.css           */
+/* ────────────────────────────────────────────────────────── */
+
+.optimized-image-wrapper {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+}
+
+.optimized-image-wrapper.loading {
+  background: linear-gradient(
+    90deg,
+    var(--surface) 0%,
+    var(--surface-hover) 50%,
+    var(--surface) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.optimized-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Dark Mode Support */
+html.dark .optimized-image-wrapper.loading {
+  background: linear-gradient(
+    90deg,
+    var(--surface-dark) 0%,
+    var(--surface-dark-hover) 50%,
+    var(--surface-dark) 100%
+  );
+}
+
+/* Accessibility: Disable animation for users preferring reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .optimized-image-wrapper.loading {
+    background: var(--surface);
+    animation: none;
+  }
+}

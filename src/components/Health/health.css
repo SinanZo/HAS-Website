@@ -1,0 +1,12 @@
+.health-banner {
+  width: 100%;
+  background: #fff3cd;
+  color: #856404;
+  border-bottom: 1px solid #ffeeba;
+  font-size: 14px;
+}
+.health-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 8px 16px;
+}

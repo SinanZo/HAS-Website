@@ -1,0 +1,32 @@
+name: Check products data
+
+on:
+  push:
+    branches: ["main", "master"]
+  pull_request:
+    branches: ["main", "master"]
+
+jobs:
+  check-data:
+    name: Validate products data
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'pnpm'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 'latest'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run products data check
+        run: pnpm run check-data

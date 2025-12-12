@@ -1,0 +1,54 @@
+/* src/components/LanguageSwitcher/LanguageSwitcher.css */
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.language-switcher-buttons {
+  display: flex;
+  gap: 0;
+  background-color: var(--surface-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 2px;
+  gap: 2px;
+}
+
+.language-btn {
+  padding: var(--space-xs) var(--space-md);
+  background-color: transparent;
+  border: none;
+  color: var(--fg-muted);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.language-btn:hover {
+  color: var(--text);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.language-btn.active {
+  background-color: var(--bg);
+  color: var(--primary);
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+.language-btn:focus-visible {
+  outline: var(--ring-width) solid var(--ring);
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .language-btn {
+    padding: var(--space-xs) var(--space-sm);
+    font-size: var(--font-size-xs);
+  }
+}

@@ -1,48 +1,55 @@
+/* Design System Imports */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;600;700;800&display=swap');
+@import './styles/tokens.css';
+@import './styles/rtl.css';
+@import './styles/theme.css';
+
+/* Tailwind CSS Directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Additional Global Styles */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #fff;
-  color: #333;
-  line-height: 1.6;
+  padding: 0;
 }
 
-* {
-  box-sizing: border-box;
+/* Ensure focus visible is always applied */
+:focus-visible {
+  outline: var(--ring-width) solid var(--ring);
+  outline-offset: 2px;
 }
 
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
-    margin: 0.5rem 0;
+/* Skip to main content link (accessibility) */
+.skip-to-main {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary);
+  color: white;
+  padding: var(--space-sm) var(--space-md);
+  text-decoration: none;
+  z-index: var(--z-tooltip);
+  border-radius: var(--radius-md);
+}
+
+.skip-to-main:focus {
+  top: 0;
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background-color: white;
+    color: black;
   }
-  
-  p {
-    margin: 0.5rem 0;
-    line-height: 1.5;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 1rem 0;
-    background-color: #333;
-    color: #fff;
-  }
-  
-  .footer-links a {
-    color: #ff8800;
-    text-decoration: none;
-    margin: 0 0.5rem;
-  }
-  
-  .footer-links span {
-    color: #fff;
-  }
-  
-  .footer-links a:hover {
+
+  a {
     text-decoration: underline;
   }
-  
+
+  .no-print {
+    display: none !important;
+  }
+}

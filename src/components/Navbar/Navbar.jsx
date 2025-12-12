@@ -6,10 +6,12 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../../assets/images/logo.png";
 import productsData from "../../data/productsData";
 import categoriesData from "../../data/categoriesData";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
+import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,13 +25,6 @@ const Navbar = () => {
   useEffect(() => {
     setMenuOpen(false);
   }, [location]);
-
-  const changeLanguage = useCallback(
-    (lang) => {
-      i18n.changeLanguage(lang);
-    },
-    [i18n]
-  );
 
   const categories = useMemo(() => {
     return [...new Set(productsData.map(p => p.category).filter(Boolean).map(c => c.trim()).filter(c => c.length > 0))];
@@ -85,11 +80,8 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-right">
-              <div className="language-switcher">
-                <button onClick={() => changeLanguage("en")} className={i18n.language === "en" ? "active" : ""}>EN</button>
-                <span>|</span>
-                <button onClick={() => changeLanguage("ar")} className={i18n.language === "ar" ? "active" : ""}>AR</button>
-              </div>
+              <LanguageSwitcher />
+              <ThemeSwitcher />
               <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
                 {menuOpen ? <FaTimes /> : <FaBars />}
               </button>

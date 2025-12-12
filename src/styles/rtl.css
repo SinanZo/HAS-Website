@@ -1,0 +1,429 @@
+/* RTL/LTR Layout System */
+/* Uses logical properties for bidirectional text and layout */
+
+/* ============================================
+   BASE RTL/LTR RULES
+   ============================================ */
+
+/* LTR (Left-to-Right) - Default */
+html[dir="ltr"] {
+  direction: ltr;
+  text-align: start;
+}
+
+/* RTL (Right-to-Left) */
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: start;
+}
+
+/* Font selection for Arabic */
+html[dir="rtl"] {
+  font-family: var(--font-arabic);
+}
+
+html[dir="ltr"] {
+  font-family: var(--font-sans);
+}
+
+/* ============================================
+   LOGICAL SPACING PROPERTIES
+   ============================================ */
+/* Use padding-inline, margin-inline, inset-inline to automatically 
+   flip left/right based on dir attribute */
+
+/* Common utility classes for logical spacing */
+
+/* Padding */
+.p-inline-sm {
+  padding-inline: var(--space-sm);
+}
+
+.p-inline-md {
+  padding-inline: var(--space-md);
+}
+
+.p-inline-lg {
+  padding-inline: var(--space-lg);
+}
+
+.p-inline-start-sm {
+  padding-inline-start: var(--space-sm);
+}
+
+.p-inline-start-md {
+  padding-inline-start: var(--space-md);
+}
+
+.p-inline-start-lg {
+  padding-inline-start: var(--space-lg);
+}
+
+.p-inline-end-sm {
+  padding-inline-end: var(--space-sm);
+}
+
+.p-inline-end-md {
+  padding-inline-end: var(--space-md);
+}
+
+.p-inline-end-lg {
+  padding-inline-end: var(--space-lg);
+}
+
+/* Margin */
+.m-inline-auto {
+  margin-inline: auto;
+}
+
+.m-inline-sm {
+  margin-inline: var(--space-sm);
+}
+
+.m-inline-md {
+  margin-inline: var(--space-md);
+}
+
+.m-inline-lg {
+  margin-inline: var(--space-lg);
+}
+
+.m-inline-start-sm {
+  margin-inline-start: var(--space-sm);
+}
+
+.m-inline-start-md {
+  margin-inline-start: var(--space-md);
+}
+
+.m-inline-start-lg {
+  margin-inline-start: var(--space-lg);
+}
+
+.m-inline-end-sm {
+  margin-inline-end: var(--space-sm);
+}
+
+.m-inline-end-md {
+  margin-inline-end: var(--space-md);
+}
+
+.m-inline-end-lg {
+  margin-inline-end: var(--space-lg);
+}
+
+/* ============================================
+   TEXT ALIGNMENT
+   ============================================ */
+/* Use text-align: start/end instead of left/right */
+
+.text-start {
+  text-align: start;
+}
+
+.text-end {
+  text-align: end;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ============================================
+   FLEXBOX - DIRECTION AWARE
+   ============================================ */
+
+/* Row direction - auto-flips in RTL */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+html[dir="rtl"] .flex-row {
+  flex-direction: row-reverse;
+}
+
+/* Explicit row-reverse for LTR that should stay reversed */
+.flex-row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .flex-row-reverse {
+  flex-direction: row;
+}
+
+/* Column direction - stays the same in both modes */
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Justify content */
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+/* Align items */
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.items-center {
+  align-items: center;
+}
+
+/* ============================================
+   INSET / POSITIONING
+   ============================================ */
+/* Use inset-inline instead of left/right */
+
+.inset-inline-start-0 {
+  inset-inline-start: 0;
+}
+
+.inset-inline-start-1 {
+  inset-inline-start: var(--space-sm);
+}
+
+.inset-inline-start-2 {
+  inset-inline-start: var(--space-md);
+}
+
+.inset-inline-end-0 {
+  inset-inline-end: 0;
+}
+
+.inset-inline-end-1 {
+  inset-inline-end: var(--space-sm);
+}
+
+.inset-inline-end-2 {
+  inset-inline-end: var(--space-md);
+}
+
+/* ============================================
+   BORDER RADIUS
+   ============================================ */
+/* For rounded corners on start/end sides */
+
+.rounded-s-md {
+  border-start-start-radius: var(--radius-md);
+  border-end-start-radius: var(--radius-md);
+}
+
+.rounded-e-md {
+  border-start-end-radius: var(--radius-md);
+  border-end-end-radius: var(--radius-md);
+}
+
+/* ============================================
+   COMMON COMPONENTS - RTL AWARE
+   ============================================ */
+
+/* Navigation list - auto-flips in RTL */
+nav ul, nav ol {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-md);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+html[dir="rtl"] nav ul,
+html[dir="rtl"] nav ol {
+  flex-direction: row-reverse;
+}
+
+/* Breadcrumb - auto-flips visual order */
+.breadcrumb {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-xs);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+html[dir="rtl"] .breadcrumb {
+  flex-direction: row-reverse;
+}
+
+.breadcrumb li::after {
+  content: '/';
+  margin-inline: var(--space-xs);
+  color: var(--fg-muted);
+}
+
+html[dir="rtl"] .breadcrumb li:last-child::after {
+  content: '';
+  margin: 0;
+}
+
+html[dir="ltr"] .breadcrumb li:last-child::after {
+  content: '';
+  margin: 0;
+}
+
+/* ============================================
+   OVERFLOW GUARD FOR RTL
+   ============================================ */
+/* Prevent horizontal scrollbar in RTL on small screens */
+
+@media (max-width: 768px) {
+  html[dir="rtl"] {
+    overflow-x: hidden;
+  }
+
+  html[dir="rtl"] body {
+    overflow-x: hidden;
+  }
+}
+
+/* ============================================
+   ICON/IMAGE POSITIONING - LTR AWARE
+   ============================================ */
+/* Icons before or after text, flip based on direction */
+
+.icon-before {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-direction: row;
+}
+
+html[dir="rtl"] .icon-before {
+  flex-direction: row-reverse;
+}
+
+.icon-after {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .icon-after {
+  flex-direction: row;
+}
+
+/* ============================================
+   TRANSFORM UTILITIES
+   ============================================ */
+/* For animations or transforms that need direction awareness */
+
+.scale-x-flip {
+  transform: scaleX(1);
+}
+
+html[dir="rtl"] .scale-x-flip {
+  transform: scaleX(-1);
+}
+
+/* ============================================
+   FOCUS VISIBLE STYLES - RTL AWARE
+   ============================================ */
+/* Outline offset works the same in both directions */
+
+:focus-visible {
+  outline: var(--ring-width) solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   SHADOW AND DEPTH - DIRECTION AWARE
+   ============================================ */
+/* Shadows that might appear on one side */
+
+.shadow-start {
+  box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+html[dir="rtl"] .shadow-start {
+  box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-end {
+  box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+html[dir="rtl"] .shadow-end {
+  box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   MODAL / DRAWER - RTL AWARE
+   ============================================ */
+
+/* LTR drawer slides from left */
+.drawer-ltr {
+  transform: translateX(-100%);
+  transition: transform var(--transition-base);
+  position: fixed;
+  inset-block: 0;
+  inset-inline-start: 0;
+  z-index: var(--z-modal);
+}
+
+.drawer-ltr.open {
+  transform: translateX(0);
+}
+
+/* RTL drawer slides from right */
+html[dir="rtl"] .drawer-ltr {
+  transform: translateX(100%);
+  inset-inline-start: auto;
+  inset-inline-end: 0;
+}
+
+html[dir="rtl"] .drawer-ltr.open {
+  transform: translateX(0);
+}
+
+/* ============================================
+   RESPONSIVE - RTL AWARE GRID
+   ============================================ */
+
+/* Grid that adapts to content width but respects text direction */
+.grid-auto-fit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-md);
+}
+
+/* Ensures content flows correctly in both directions */
+.grid-auto-fit > * {
+  direction: inherit;
+}
+
+/* ============================================
+   PRINT STYLES - RTL AWARE
+   ============================================ */
+
+@media print {
+  html[dir="rtl"] {
+    direction: rtl;
+  }
+
+  html[dir="ltr"] {
+    direction: ltr;
+  }
+}

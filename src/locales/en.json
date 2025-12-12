@@ -83,7 +83,7 @@
   },
   "contact": {
     "title": "Contact Hilmi Abu Sham & Partners",
-    "description": "We’re here to assist you. Reach out to us anytime!",
+    "description": "We're here to assist you. Reach out to us anytime!",
     "companyName": "Hilmi Abu Sham & Partners Co.",
     "address": "Jabal Amman - Third Circle - Mithqal AL Fayez Street. Building #25, Amman 11183, Jordan",
     "phone": "Phone",
@@ -97,7 +97,67 @@
     "messagePlaceholder": "Your Message",
     "sendButton": "Send Message",
     "visitUs": "Visit Us",
-    "getDirections": "Get Directions"
+    "getDirections": "Get Directions",
+    "metaTitle": "Contact Hilmi Abu Sham & Partners Co. - PPE & Industrial Safety",
+    "metaDescription": "Get in touch with Hilmi Abu Sham & Partners Co. for safety equipment and industrial solutions. Phone: +962 6 464 8850, Email: info@has.com.jo",
+    "errors": {
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email address",
+      "phoneInvalid": "Please enter a valid phone number",
+      "subjectRequired": "Subject is required",
+      "messageRequired": "Message is required",
+      "messageTooShort": "Message must be at least 10 characters long",
+      "spam": "Your message appears to contain spam. Please try again.",
+      "formInvalid": "Please check all fields and try again",
+      "submitFailed": "Failed to send message. Please try again."
+    },
+    "fields": {
+      "name": "Full Name",
+      "namePlaceholder": "Your Name",
+      "email": "Email Address",
+      "emailPlaceholder": "Your Email",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+962 (0) 6 464-8850",
+      "company": "Company Name (Optional)",
+      "companyPlaceholder": "Your Company",
+      "subject": "Subject",
+      "subjectPlaceholder": "What is this about?",
+      "message": "Message",
+      "messagePlaceholder": "Tell us more about your inquiry..."
+    },
+    "info": {
+      "title": "Contact Information",
+      "infoTitle": "Get In Touch",
+      "phone": "+962 (0) 6 464-8850",
+      "email": "info@has.com.jo",
+      "address": "Jabal Amman - Third Circle - Mithqal AL Fayez Street. Building #25, Amman 11183, Jordan",
+      "hours": "Business Hours",
+      "saturday": "Saturday - Thursday: 9:00 AM - 5:00 PM",
+      "friday": "Friday: Closed",
+      "closed": "Closed"
+    },
+    "status": {
+      "success": "Thank you! We've received your message and will get back to you shortly.",
+      "submitFailed": "Failed to send message. Please try again.",
+      "submitting": "Sending...",
+      "closeAlert": "Close"
+    },
+    "ui": {
+      "formTitle": "Send us your inquiry",
+      "subtitle": "We'd love to hear from you",
+      "whatsappMessage": "Hello! I'd like to inquire about your products.",
+      "whatsappAriaLabel": "Send message on WhatsApp"
+    }
+    ,
+    "success": "Thank you! We've received your message and will get back to you shortly.",
+    "submitting": "Sending...",
+    "closeAlert": "Close",
+    "formTitle": "Send us your inquiry",
+    "subtitle": "We'd love to hear from you",
+    "whatsappMessage": "Hello! I'd like to inquire about your products.",
+    "whatsappAriaLabel": "Send message on WhatsApp",
+    "infoTitle": "Get In Touch"
   },
   "aboutPage": {
     "pageTitle": "About Hilmi Abu Sham & Partners - PPE & Industrial Safety",
